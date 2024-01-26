@@ -5,12 +5,62 @@ body {
     background-color: #ffffff;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
 }
 
-ul, ol {
-    list-style: none;
+button {
+    cursor: pointer;
+}
+
+ul, 
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding-top: 24;
+    padding-bottom: 24;
+    border-bottom: 1px solid #E7E9FC;
+    background: var(--WHITE, #FFF);
+}
+
+.container {
+    width: 100%;
+    max-width: 1158px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
 }
 
 .nav-logo-web {
@@ -21,15 +71,16 @@ ul, ol {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-right: 76px;
 }
 
 .nav-logo-studio {
     color: #2E2F42;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
 }
 
 .nav-link {
@@ -38,6 +89,8 @@ ul, ol {
     font-weight: 500;
     line-height: 1.50;
     letter-spacing: 0.02em;
+    padding: 24px 0;
+    display: block;
 }
 
 .nav-link:hover,
@@ -47,6 +100,12 @@ ul, ol {
 
 .address {
     font-style: normal;
+    margin-left: auto;
+}
+
+.address-list {
+    display: flex;
+    gap: 40px;
 }
 
 .address-link {
@@ -61,16 +120,26 @@ ul, ol {
     color: #404bbf;
 }
 
-.section-effective {
+.hero-section {
     background: #2E2F42;
+    width: 1440px;
+    height: 600px;
+    flex-shrink: 0;
+    padding: 188px;
 }
 
-.section-effective-header {
+.hero {
+    height: 56px; 
+}
+
+.hero-header {
     color: #FFF;
     text-align: center;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
+    height: 120px;
+    width: 496px;
 }
 
 .button {
@@ -80,7 +149,12 @@ ul, ol {
     line-height: 1.50;
     letter-spacing: 0.04em;
     background: #4D5AE5;
-    cursor: pointer;  
+    cursor: pointer;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    border: none;
 }
 
 .button:hover, 
@@ -90,14 +164,40 @@ ul, ol {
 
 .section-auor {
     background: #FFF;
+    padding: 188px 0;
 }
 
-.section-auor-name {
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.ul-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.li-list {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    text-align: center;
+}
+
+.third-heading {
     color: #2E2F42;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.20;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .section-auor-text {
@@ -109,18 +209,7 @@ ul, ol {
 
 .section-ourteam {
     background: #F4F4FD;
-}
-
-.section-ourteam-description {
-    background: #FFF;
-}
-
-.mark {
-    color: #2E2F42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.20;
-    letter-spacing: 0.02em;
+    padding: 120px 0;
 }
 
 .section-ourteam-header {
@@ -141,21 +230,14 @@ ul, ol {
 }
 
 .section-portfolio {
-    color: #F4F4FD;    
+    color: #F4F4FD;
+    padding: 120px 0;
 }
 
 .portfolio-header {
     color: #2E2F42;
     font-weight: 500;
     text-align: center;
-}
-
-.portfolio-description {
-    color: #2E2F42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.20;
-    letter-spacing: 0.02em;
 }
 
 .portfolio-text {
